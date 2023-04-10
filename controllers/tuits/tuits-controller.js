@@ -8,13 +8,13 @@ const createTuit = async (req, res) => {
     // newTuit._id = (new Date()).getTime()+'';
     newTuit.likes = 0;
     newTuit.liked = false;
-    const insertedTuit = await tuitsDao.newTuit(newTuit);
+    const insertedTuit = await tuitsDao.createTuit(newTuit);
     res.json(insertedTuit);
   }
   
 const findTuits = async (req, res) => {
   const tuits = await tuitsDao.findTuits()
-  res.json(tuits)
+  res.json(tuits);
 }
 
 const updateTuit = async (req, res) => {
