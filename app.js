@@ -8,7 +8,7 @@ import express from 'express';
 import mongoose from "mongoose";
 const app = express()
 app.use(cors({
-    origin: ["https://tuiter-node-server-app-1ro0.onrender.com","https://a9--sweet-phoenix-f1ed1a.netlify.app/tuiter"],
+    origin: ["https://tuiter-node-server-app-1ro0.onrender.com","https://a9--sweet-phoenix-f1ed1a.netlify.app/"],
     headers: ["Content-Type"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
