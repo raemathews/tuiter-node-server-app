@@ -8,9 +8,11 @@ import express from 'express';
 import mongoose from "mongoose";
 const app = express()
 app.use(cors({
-  origin: '*',
-  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+    origin: ["https://tuiter-node-server-app-1ro0.onrender.com","https://a9--sweet-phoenix-f1ed1a.netlify.app/tuiter"],
+    headers: ["Content-Type"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
+app.options('*', cors());
 app.use(express.json());
 const DB_CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/tuiter';
 mongoose.connect(DB_CONNECTION_STRING);
