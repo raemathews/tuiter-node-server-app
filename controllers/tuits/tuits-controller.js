@@ -39,10 +39,10 @@ const updateTuit = async (req, res) => {
   }
     
 const TuitsController = (app) => {
- app.post('/api/tuits', cors(), createTuit);
- app.get('/api/tuits', cors(), findTuits);
- app.put('/api/tuits/:tid', cors(), updateTuit);
- app.delete('/api/tuits/:tid', cors(), deleteTuit);
+ app.post('/api/tuits', createTuit);
+ app.get('/api/tuits', findTuits);
+ app.put('/api/tuits/:tid', updateTuit);
+ app.delete('/api/tuits/:tid',deleteTuit);
 }
 
 export default TuitsController
