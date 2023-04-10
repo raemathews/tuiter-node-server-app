@@ -7,7 +7,10 @@ import cors from 'cors'
 import express from 'express';
 import mongoose from "mongoose";
 const app = express()
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.use(express.json());
 const DB_CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/tuiter';
 mongoose.connect(DB_CONNECTION_STRING);
